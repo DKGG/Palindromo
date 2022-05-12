@@ -16,7 +16,9 @@ public class Palindromo {
        String digitado = "";
        Scanner scan = new Scanner(System.in);
        System.out.println("Digite a palavra: ");
+       //leitor de dados
        digitado = scan.next();
+       //transformando a stringe em vetor de char
        char[] charArray = digitado.toCharArray();       
        if(verificaPalindromo(charArray)){
            System.out.println("É palindromo");
@@ -28,10 +30,12 @@ public class Palindromo {
     private static boolean verificaPalindromo(char[] vetorPalavra) {
        char[] invertido = new char[vetorPalavra.length];
        int j = vetorPalavra.length;
+       //inverte a palavra
        for(int i = 0;i<vetorPalavra.length;i++){           
             j--;
             invertido[i] = vetorPalavra[j];          
-       }       
+       }
+        // retorna a booleana      
        if(Arrays.equals(invertido, vetorPalavra)){          
            return true;
        }       
