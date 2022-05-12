@@ -17,7 +17,6 @@ public class Palindromo {
     public static void main(String[] args) {        
         char[] charArray = converteParaChar(insereDados());
         printaResultado(verificaPalindromo(charArray, inverteVetor(charArray)));
-
     }
     //Pede pro usuário inserir uma palavra
     public static String insereDados() {        
@@ -36,12 +35,11 @@ public class Palindromo {
     //inverte a palavra
     public static char[] inverteVetor(char[] vetorPalavra) {
         char[] invertido = new char[vetorPalavra.length];
-        int j = vetorPalavra.length;
+        //int j = vetorPalavra.length;
         //o vetor invertido começa com o index 0 enquanto a palavra começa do tamano até 0 pra inverter a palavra
-        for (int i = 0; i < vetorPalavra.length; i++) {
-            j--;
+        for (int i = 0, j = vetorPalavra.length-1; i < vetorPalavra.length; i++,j--) {           
             invertido[i] = vetorPalavra[j];
-        }
+        }        
         return invertido;
     }
     //verifica se a palavra é palindromo
